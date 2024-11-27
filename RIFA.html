@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifa de Meses Oculta</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        #result { margin-top: 20px; font-size: 20px; font-weight: bold; }
+    </style>
+    <script>
+        const months = [
+            "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+            "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+        ];
+
+        function chooseRandomMonth() {
+            if (months.length === 0) {
+                alert("Todos los meses ya han sido asignados.");
+                return;
+            }
+            const randomIndex = Math.floor(Math.random() * months.length);
+            const chosenMonth = months.splice(randomIndex, 1)[0]; // Elimina el mes y lo devuelve
+            document.getElementById("result").innerText = `¡Te tocó un mes al azar!`;
+            alert(`Tu mes es: ${chosenMonth}`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Rifa de Meses</h1>
+    <p>Haz clic en el botón para elegir un mes al azar (oculto):</p>
+    <button onclick="chooseRandomMonth()">Elegir mes</button>
+    <div id="result"></div>
+</body>
+</html>
