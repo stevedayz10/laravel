@@ -5,9 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rifa de Meses Oculta</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
-        #result { margin-top: 20px; font-size: 20px; font-weight: bold; }
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh; 
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 { 
+            margin: 0; 
+        }
+        main { 
+            flex: 1; 
+            padding: 20px; 
+        }
+        button { 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            background-color: #007bff; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+        }
+        button:hover { 
+            background-color: #0056b3; 
+        }
+        #result { 
+            margin-top: 20px; 
+            font-size: 20px; 
+            font-weight: bold; 
+            color: #333; 
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 14px;
+            margin-top: auto;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
     <script>
         const months = [
@@ -28,11 +80,19 @@
     </script>
 </head>
 <body>
-    <h1>Rifa de Meses</h1>
-    <p>Haz clic en el botón para elegir un mes al azar (oculto):</p>
-    <p>Si ud posee mas de 1 mes hacer clic la cantidad de cupos que ha elegido</p>
-    <p>Favor enviar captura de pantalla al grupo de Whatsapp con el mes que le asigno el sistema</p>
-    <button onclick="chooseRandomMonth()">Elegir mes</button>
-    <div id="result"></div>
+    <header>
+        <h1>Rifa de Meses</h1>
+    </header>
+    <main>
+        <p><strong>Indicaciones:</strong></p>
+        <p>Si usted posee más de un mes, haga clic la cantidad de cupos que ha elegido.</p>
+        <p>Favor enviar captura de pantalla al grupo de WhatsApp con el mes que le asignó el sistema.</p>
+        <p>Haz clic en el botón para elegir un mes al azar (oculto):</p>
+        <button onclick="chooseRandomMonth()">Elegir mes</button>
+        <div id="result"></div>
+    </main>
+    <footer>
+        Página by <a href="#" target="_blank">stevedayz</a>
+    </footer>
 </body>
 </html>
